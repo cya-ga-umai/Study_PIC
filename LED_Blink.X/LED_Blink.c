@@ -43,11 +43,11 @@ int main(void) {
     LATC = 0x00;
     
     while(1){
-        LATCbits.LATC2 = 1;     /* LED点灯 */
-        //PORTCbits.RC3 = 1;    /* PORTxにビットをセットしてもLATxにセットされる */
+        LATCbits.LATC2 = 0;     /* LED点灯 */
+        //PORTCbits.RC3 = 0;    /* PORTxにビットをセットしてもLATxにセットされる */
         __delay_ms(500);
-        LATCbits.LATC2 = 0;     /* LED消灯 */
-        //PORTCbits.RC3 = 0;
+        LATCbits.LATC2 = 1;     /* LED消灯 */
+        //PORTCbits.RC3 = 1;
         __delay_ms(500);
     }
     return (EXIT_SUCCESS);
